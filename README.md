@@ -1,8 +1,8 @@
 # ascii-system-map
 
-A Claude Code skill that turns any PR, endpoint, feature, or incident into a scannable ASCII scope map.
+An agent skill for Claude Code and Codex that turns any PR, endpoint, feature, or incident into a scannable ASCII scope map.
 
-![ascii-system-map in a Claude Code session](docs/demo.png)
+![ascii-system-map in an agent session](docs/demo.png)
 
 Instead of a wall of prose, it draws a plain-text tree: live behavior separated from docs, tests, and scaffolding, confirmed facts marked apart from assumptions. Paste it into a PR description, Slack thread, or review comment; it renders everywhere.
 
@@ -16,13 +16,25 @@ Instead of a wall of prose, it draws a plain-text tree: live behavior separated 
 
 ```bash
 git clone https://github.com/aviju888/ascii-system-map.git
+```
+
+Claude Code:
+
+```bash
 mkdir -p ~/.claude/skills/ascii-system-map
 cp ascii-system-map/SKILL.md ~/.claude/skills/ascii-system-map/
 ```
 
+Codex:
+
+```bash
+mkdir -p ~/.codex/skills/ascii-system-map
+cp -R ascii-system-map/SKILL.md ascii-system-map/agents ~/.codex/skills/ascii-system-map/
+```
+
 ## Use
 
-The skill activates whenever you ask Claude Code for a scope map, PR map, ASCII diagram, or "what is included" breakdown:
+The skill activates whenever you ask your agent for a scope map, PR map, ASCII diagram, or "what is included" breakdown:
 
 ```
 map out what's in this PR

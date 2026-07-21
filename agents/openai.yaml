@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASCII System Map"
+  short_description: "Draw PR and system scope maps"
+  default_prompt: "Create a text-tree map of what is included, what changes live behavior, and what remains out of scope."
