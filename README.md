@@ -2,6 +2,8 @@
 
 A Claude Code skill that turns any PR, endpoint, feature, or incident into a scannable ASCII scope map.
 
+![ascii-system-map in a Claude Code session](docs/demo.png)
+
 Instead of a wall of prose about what a change includes, you get a text tree that separates live behavior from docs, tests, tools, and scaffolding, and marks what is confirmed versus assumed. Paste it straight into a PR description, Slack thread, or review comment; it is plain text, so it renders everywhere.
 
 ```text
