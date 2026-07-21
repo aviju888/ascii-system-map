@@ -6,31 +6,6 @@ A Claude Code skill that turns any PR, endpoint, feature, or incident into a sca
 
 Instead of a wall of prose, it draws a plain-text tree: live behavior separated from docs, tests, and scaffolding, confirmed facts marked apart from assumptions. Paste it into a PR description, Slack thread, or review comment; it renders everywhere.
 
-```text
-PR #123: rate-limit the export endpoint
-│
-├─ 1) Live Behavior
-│  │
-│  ├─ POST /api/export
-│  │  ├─ old: unlimited concurrent exports
-│  │  └─ new: 3 per user, 429 + Retry-After beyond that
-│  │
-│  └─ side effect
-│     └─ export_jobs table gains status column
-│
-├─ 2) Diagnostics / Observability
-│  ├─ rate_limit_hit event
-│  └─ queue depth now visible in logs
-│
-├─ 3) Docs + Tests
-│  ├─ docs/exports.md
-│  └─ 6 focused tests (limit, burst, retry header)
-│
-└─ 4) Not Included / Deferred
-   ├─ per-org limits (assumption: per-user is enough)
-   └─ admin override UI
-```
-
 ## Why
 
 - **Scope at a glance.** What changes live behavior, what is just tooling, what is deferred.
